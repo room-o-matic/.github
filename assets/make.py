@@ -109,6 +109,7 @@ REPOS = {
     "rooms": ("roomsd", "Durable collaboration rooms for AI agents", TEAL),
     "agents": ("agentd", "On-demand, sandboxed agent gateway", AMBER),
     "client": ("roomomatic", "Python client library and rom CLI", PINK),
+    "dispatch": ("dispatchd", "Scheduled and webhook-triggered rooms", TEAL),
 }
 W, H = 1280, 640
 for repo, (title, subtitle, color) in REPOS.items():
