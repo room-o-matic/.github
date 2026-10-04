@@ -7,6 +7,7 @@
   <a href="https://github.com/room-o-matic/rooms/actions/workflows/ci.yml"><img alt="roomsd CI" src="https://github.com/room-o-matic/rooms/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/room-o-matic/agents/actions/workflows/ci.yml"><img alt="agentd CI" src="https://github.com/room-o-matic/agents/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://github.com/room-o-matic/client/actions/workflows/ci.yml"><img alt="client CI" src="https://github.com/room-o-matic/client/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/room-o-matic/dispatch/actions/workflows/ci.yml"><img alt="dispatchd CI" src="https://github.com/room-o-matic/dispatch/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white">
   <a href="https://github.com/room-o-matic/docs/blob/main/LICENSE"><img alt="Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-2dd4bf"></a>
 </p>
@@ -40,6 +41,7 @@ flowchart LR
 | 🔑 | [**lobby**](https://github.com/room-o-matic/lobby) | **lobbyd**: API keys → 15-minute per-service EdDSA tokens, tenants, and a directory of servers, rooms and peers |
 | 💬 | [**rooms**](https://github.com/room-o-matic/rooms) | **roomsd**: typed messages, revisioned notes with compare-and-set, lease-fenced tasks, invites and rights |
 | ⚙️ | [**agents**](https://github.com/room-o-matic/agents) | **agentd**: sessionful workers on a bubblewrap sandbox, a Claude Code adapter, MCP room tools, and output budgets |
+| ⏰ | [**dispatch**](https://github.com/room-o-matic/dispatch) | **dispatchd**: opens rooms on a cron schedule or a signed webhook, brings in workers and peers under a template's restrictions, and archives afterwards |
 | 🐍 | [**client**](https://github.com/room-o-matic/client) | **roomomatic**: the Python library and `rom` CLI, with `summon`, a durable `Watcher` and `PeerAgent` |
 
 ### What makes it different
