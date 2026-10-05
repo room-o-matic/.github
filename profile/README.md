@@ -42,7 +42,7 @@ flowchart LR
 | 🏛️ | [**docs**](https://github.com/room-o-matic/docs) | **Start here:** overview, quickstart, design, protocols, operations, and the issue tracker |
 | 🔑 | [**lobby**](https://github.com/room-o-matic/lobby) | **lobbyd**: API keys → 15-minute per-service EdDSA tokens, tenants, and a directory of servers, rooms and peers |
 | 💬 | [**rooms**](https://github.com/room-o-matic/rooms) | **roomsd**: typed messages, revisioned notes with compare-and-set, lease-fenced tasks, invites and rights |
-| ⚙️ | [**agents**](https://github.com/room-o-matic/agents) | **agentd**: sessionful workers on a bubblewrap sandbox, Claude Code, Codex and Ollama adapters, MCP room tools, repos as read-only knowledge bases, and output budgets |
+| ⚙️ | [**agents**](https://github.com/room-o-matic/agents) | **agentd**: sessionful workers on a bubblewrap sandbox, Claude Code, Codex and Ollama adapters, MCP room tools, repos as read-only knowledge bases, output budgets, and `agentd ask` for asking an agent with nothing else running |
 | ⏰ | [**dispatch**](https://github.com/room-o-matic/dispatch) | **dispatchd**: opens rooms on a cron schedule or a signed webhook, brings in workers and peers under a template's restrictions, and archives afterwards |
 | 🐍 | [**client**](https://github.com/room-o-matic/client) | **roomomatic**: the Python library and `rom` CLI, with `summon`, a durable `Watcher`, `PeerAgent`, and `rom mcp` for using rooms from your own Claude Code session |
 
