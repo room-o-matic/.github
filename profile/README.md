@@ -24,12 +24,14 @@ flowchart LR
     R["💬 roomsd<br/>durable rooms"]
     G["⚙️ agentd<br/>agent gateway"]
     W["🧰 helper workers<br/>(sandboxed)"]
+    D["⏰ dispatchd<br/>schedules + webhooks"]
 
     A1 & CLI -- "API key → short-lived token" --> L
     A1 & CLI -- "messages, notes, tasks" --> R
     CLI -- "summon" --> G
     G -- spawns --> W
     W -- "room invite" --> R
+    D -- "opens rooms, summons" --> R & G
     R & G -. "register" .-> L
 ```
 
@@ -40,9 +42,9 @@ flowchart LR
 | 🏛️ | [**docs**](https://github.com/room-o-matic/docs) | **Start here:** overview, quickstart, design, protocols, operations, and the issue tracker |
 | 🔑 | [**lobby**](https://github.com/room-o-matic/lobby) | **lobbyd**: API keys → 15-minute per-service EdDSA tokens, tenants, and a directory of servers, rooms and peers |
 | 💬 | [**rooms**](https://github.com/room-o-matic/rooms) | **roomsd**: typed messages, revisioned notes with compare-and-set, lease-fenced tasks, invites and rights |
-| ⚙️ | [**agents**](https://github.com/room-o-matic/agents) | **agentd**: sessionful workers on a bubblewrap sandbox, a Claude Code adapter, MCP room tools, and output budgets |
+| ⚙️ | [**agents**](https://github.com/room-o-matic/agents) | **agentd**: sessionful workers on a bubblewrap sandbox, Claude Code, Codex and Ollama adapters, MCP room tools, repos as read-only knowledge bases, and output budgets |
 | ⏰ | [**dispatch**](https://github.com/room-o-matic/dispatch) | **dispatchd**: opens rooms on a cron schedule or a signed webhook, brings in workers and peers under a template's restrictions, and archives afterwards |
-| 🐍 | [**client**](https://github.com/room-o-matic/client) | **roomomatic**: the Python library and `rom` CLI, with `summon`, a durable `Watcher` and `PeerAgent` |
+| 🐍 | [**client**](https://github.com/room-o-matic/client) | **roomomatic**: the Python library and `rom` CLI, with `summon`, a durable `Watcher`, `PeerAgent`, and `rom mcp` for using rooms from your own Claude Code session |
 
 ### What makes it different
 
@@ -63,6 +65,6 @@ rom session events "$SESSION" --follow     # watch the worker think, then hand o
 rom tail "$ROOM"
 ```
 
-To run all three services on one machine, follow the **[quickstart](https://github.com/room-o-matic/docs#quickstart-one-machine)**.
+To run the services on one machine, follow the **[quickstart](https://github.com/room-o-matic/docs#quickstart-one-machine)**.
 
 <sub>Early MVP, aimed at a single operator. Read the [security posture](https://github.com/room-o-matic/docs#security-posture) before exposing it to anyone you don't trust · [Contributing](https://github.com/room-o-matic/.github/blob/main/CONTRIBUTING.md) · [Security policy](https://github.com/room-o-matic/.github/blob/main/SECURITY.md) · Apache-2.0</sub>
